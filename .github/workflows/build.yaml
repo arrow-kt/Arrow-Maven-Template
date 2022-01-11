@@ -21,7 +21,7 @@ jobs:
           java-version: 8
 
       - name: Restore Maven cache
-        uses: actions/cache
+        uses: actions/cache@v2.1.6
         with:
           path: |
             ${{ inputs.cache-path }}

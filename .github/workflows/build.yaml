@@ -20,14 +20,5 @@ jobs:
         with:
           java-version: 8
 
-      - name: Restore Maven cache
-        uses: actions/cache@v2.1.6
-        with:
-          path: |
-            ${{ inputs.cache-path }}
-            ${{ inputs.cache-path-add }}
-          key: ${{ matrix.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ matrix.os }}-maven-
-
       - name: Build and run test
         run: mvn compile test

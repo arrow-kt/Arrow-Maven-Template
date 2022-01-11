@@ -16,14 +16,11 @@ jobs:
     runs-on: '${{ matrix.os }}'
 
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
       - name: Setup Maven Action
         uses: s4u/setup-maven-action
         with:
           java-version: 8
+          fetch-depth: 0
 
       - name: Restore Maven cache
         id: cache

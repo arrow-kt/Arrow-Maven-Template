@@ -16,14 +16,14 @@ jobs:
 
     steps:
       - name: Setup Maven Action
-        uses: s4u/setup-maven-action
+        uses: s4u/setup-maven-action@v1.3.1
         with:
           java-version: 8
           fetch-depth: 0
 
       - name: Restore Maven cache
         id: cache
-        uses: actions/cache@v2.1.6
+        uses: actions/cache
         with:
           path: |
             ${{ inputs.cache-path }}

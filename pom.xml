@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.version>1.6.10</kotlin.version>
         <kotlin.code.style>official</kotlin.code.style>
-        <arrow.version>1.0.6-alpha.1</arrow.version>
+        <arrow.version>1.0.2-alpha.43</arrow.version>
         <kotest.version>5.1.0</kotest.version>
     </properties>
 
@@ -27,17 +27,17 @@
         </dependency>
         <dependency>
             <groupId>io.arrow-kt</groupId>
-            <artifactId>arrow-core-jvm</artifactId>
+            <artifactId>arrow-core</artifactId>
             <version>${arrow.version}</version>
         </dependency>
         <dependency>
             <groupId>io.arrow-kt</groupId>
-            <artifactId>arrow-optics-jvm</artifactId>
+            <artifactId>arrow-optics</artifactId>
             <version>${arrow.version}</version>
         </dependency>
         <dependency>
             <groupId>io.arrow-kt</groupId>
-            <artifactId>arrow-fx-coroutines-jvm</artifactId>
+            <artifactId>arrow-fx-coroutines</artifactId>
             <version>${arrow.version}</version>
         </dependency>
         <dependency>

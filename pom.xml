@@ -17,7 +17,18 @@
         <kotlin.code.style>official</kotlin.code.style>
         <arrow.version>1.0.2-alpha.43</arrow.version>
         <kotest.version>5.1.0</kotest.version>
+        <kotestArrow.version>1.2.3</kotestArrow.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+            <id>maven</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
@@ -56,6 +67,24 @@
             <groupId>io.kotest</groupId>
             <artifactId>kotest-property-jvm</artifactId>
             <version>${kotest.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.kotest.extensions</groupId>
+            <artifactId>kotest-assertions-arrow-jvm</artifactId>
+            <version>${kotestArrow.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>  <!-- Enables Laws and utilise builtin or costume Laws with Generators to verify behavior /optional/  -->
+            <groupId>io.kotest.extensions</groupId>
+            <artifactId>kotest-property-arrow-jvm</artifactId>
+            <version>${kotestArrow.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>  <!-- optics Laws from Arrow /optional/ -->
+            <groupId>io.kotest.extensions</groupId>
+            <artifactId>kotest-property-arrow-optics-jvm</artifactId>
+            <version>${kotestArrow.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

@@ -15,9 +15,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.version>1.6.10</kotlin.version>
         <kotlin.code.style>official</kotlin.code.style>
-        <arrow.version>1.0.2-alpha.43</arrow.version>
-        <kotest.version>5.1.0</kotest.version>
-        <kotestArrow.version>1.2.3</kotestArrow.version>
+        <arrow.version>1.0.3-alpha.31</arrow.version>
+        <kotest.version>5.2.2</kotest.version>
+        <kotestArrow.version>1.2.4</kotestArrow.version>
     </properties>
 
     <repositories>

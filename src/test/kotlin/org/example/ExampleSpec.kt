@@ -2,9 +2,11 @@ package org.example
 
 import arrow.core.Either
 import arrow.optics.Traversal
+import arrow.optics.Lens
 import arrow.typeclasses.Monoid
 import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.core.spec.style.StringSpec
+import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 import io.kotest.property.Arb
 import io.kotest.property.arbitrary.int
@@ -18,6 +20,7 @@ import io.kotest.property.arrow.core.functionAToB
 import io.kotest.property.arrow.laws.testLaws
 import io.kotest.property.arrow.optics.TraversalLaws
 import kotlin.jvm.JvmInline
+import kotlin.time.Duration
 
 class ExampleSpec : StringSpec({
   "true shouldBe true" {
@@ -48,6 +51,11 @@ class ExampleSpec : StringSpec({
       funcGen = Arb.functionAToB(Arb.int()),
     )
   )
+
+  "optics test with Lens which has imported element" {
+    val i: Lens<OpticsTest, Duration> = OpticsTest.time
+    i.shouldNotBeNull()
+  }
 })
 
 
